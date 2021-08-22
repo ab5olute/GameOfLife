@@ -10,10 +10,10 @@ A Python implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki
 
 ### Example of GameOfLife usage
 
-```
+```python
 >>> life = GameOfLife.from_file(pathlib.Path('glider.txt'))
 ```
-```
+```python
 >>> life.curr_generation
 [[0, 1, 0, 0, 0],
  [0, 0, 1, 0, 0],
@@ -21,11 +21,11 @@ A Python implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki
  [0, 0, 0, 0, 0],
  [0, 0, 0, 0, 0]]
 ```
-```
+```python
 >>> for _ in range(4):
 ...    life.step()
 ```
-```
+```python
 >>> life.curr_generation
 [[0, 0, 0, 0, 0],
  [0, 0, 1, 0, 0],
@@ -33,7 +33,7 @@ A Python implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki
  [0, 1, 1, 1, 0],
  [0, 0, 0, 0, 0]]
 ```
-```
+```python
 >>> life.save(pathlib.Path('glider-4-steps.txt'))
 ```
 
