@@ -1,14 +1,14 @@
-# GameOfLife
+## GameOfLife
 
 A Python implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life) with PyGame module.
 
-## Rules
+### Rules
 
 1. Any live cell with two or three live neighbours survives.
 2. Any dead cell with three live neighbours becomes a live cell.
 3. All other live cells die in the next generation. Similarly, all other dead cells stay dead.
 
-## Example of GameOfLife usage
+### Example of GameOfLife usage
 
 ```
 >>> life = GameOfLife.from_file(pathlib.Path('glider.txt'))
@@ -37,8 +37,8 @@ A Python implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki
 >>> life.save(pathlib.Path('glider-4-steps.txt'))
 ```
 
-## Pygame Controle Settings
+### Pygame Controle Settings
 
-To pause the game: press SPACE key.
-To draw or remove cell click: LEFT MOUSE button.
+* To pause the game: press SPACE key.
+* To draw or remove cell click: LEFT MOUSE button.
 
