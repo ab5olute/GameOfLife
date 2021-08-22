@@ -32,7 +32,6 @@ class GameOfLife:
     def __init__(self, size: tuple[int, int], randomize: bool = True, max_generations: Optional[int] = None) -> None:
         self.rows: int
         self.cols: int
-
         self.rows, self.cols = size
 
         # Previous generation of cells
@@ -83,7 +82,7 @@ class GameOfLife:
 
     @property
     def is_max_generations_exceeded(self) -> bool:
-        return self.max_generations is not None and self.generations == self.max_generations
+        return self.max_generations is not None and self.generations > self.max_generations
 
     @property
     def is_changing(self) -> bool:
