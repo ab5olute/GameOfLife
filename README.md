@@ -12,20 +12,28 @@ A Python implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki
 
 ```
 >>> life = GameOfLife.from_file(pathlib.Path('glider.txt'))
+```
+```
 >>> life.curr_generation
 [[0, 1, 0, 0, 0],
  [0, 0, 1, 0, 0],
  [1, 1, 1, 0, 0],
  [0, 0, 0, 0, 0],
  [0, 0, 0, 0, 0]]
+```
+```
 >>> for _ in range(4):
 ...    life.step()
+```
+```
 >>> life.curr_generation
 [[0, 0, 0, 0, 0],
  [0, 0, 1, 0, 0],
  [0, 0, 0, 1, 0],
  [0, 1, 1, 1, 0],
  [0, 0, 0, 0, 0]]
+```
+```
 >>> life.save(pathlib.Path('glider-4-steps.txt'))
 ```
 
