@@ -92,6 +92,13 @@ class TestGameOfLife(TestCase):
         life.step()
 
         self.assertNotEqual(from_file_grid, life.curr_generation)
+        self.assertEqual(life.is_changing, True)
+
+    def test_is_not_changing(self):
+        life: GameOfLife = GameOfLife((5, 5))
+        for _ in range(10):
+            life.step()
+        self.assertFalse(life.is_changing, False)
 
     def test_from_file(self):
         life: GameOfLife = GameOfLife.from_file(Path(self.file_path))
