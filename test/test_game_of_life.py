@@ -7,7 +7,7 @@ from game_of_life import GameOfLife, Grid, Cell
 
 class TestGameOfLife(TestCase):
     def setUp(self) -> None:
-        self.file_path: str = 'glider.txt'
+        self.file_path: str = 'figures/glider.txt'
 
     def test_create_grid(self):
         life: GameOfLife = GameOfLife((5, 5), randomize=False)
@@ -95,7 +95,7 @@ class TestGameOfLife(TestCase):
         self.assertEqual(life.is_changing, True)
 
     def test_is_not_changing(self):
-        life: GameOfLife = GameOfLife((5, 5))
+        life: GameOfLife = GameOfLife((5, 5), randomize=False)
         for _ in range(10):
             life.step()
         self.assertFalse(life.is_changing, False)
