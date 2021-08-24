@@ -49,5 +49,5 @@ python -m unittest discover
 ```
 
 ### Demo
-![Demo](https://github.com/Microsoft/vscode-chrome-debug/blob/master/images/demo.gif?raw=true)
+![Demo](https://github.com/ab5olute/GameOfLife/blob/master/images/demo.gif?raw=true)
 
