@@ -11,7 +11,7 @@ A Python implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki
 ### Example of GameOfLife usage
 
 ```python
->>> life = GameOfLife.from_file(pathlib.Path('glider.txt'))
+>>> life = GameOfLife.from_file(pathlib.Path('figures/glider.txt'))
 ```
 ```python
 >>> life.curr_generation
@@ -41,4 +41,13 @@ A Python implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki
 
 * To pause the game: press SPACE key.
 * To draw or remove cell click: LEFT MOUSE button.
+
+### Run tests
+
+```python
+python -m unittest discover
+```
+
+### Demo
+![Demo](https://github.com/Microsoft/vscode-chrome-debug/blob/master/images/demo.gif?raw=true)
 
