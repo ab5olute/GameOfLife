@@ -104,3 +104,6 @@ class GameOfLife:
             for row in self.curr_generation:
                 data: str = ''.join(map(str, row)) + '\n'
                 file.write(data)
+
+    def __repr__(self) -> str:
+        return repr(self.curr_generation)
