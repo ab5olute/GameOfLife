@@ -4,7 +4,7 @@ from copy import deepcopy
 from itertools import product
 from pathlib import Path
 from random import choice
-from typing import NamedTuple, Optional
+from typing import NamedTuple, Optional, Union
 
 
 class Grid:
@@ -89,8 +89,10 @@ class GameOfLife:
         return self.prev_generation != self.curr_generation
 
     @staticmethod
-    def from_file(filename: Path) -> GameOfLife:
-        with filename.open() as file:
+    def from_file(path: Union[str, Path]) -> GameOfLife:
+        path: Path = Path(path)
+
+        with path.open() as file:
             new_grid: list[list[int]] = [list(map(int, filter(str.isdigit, line))) for line in file]
 
         new_grid: Grid = Grid(new_grid)
@@ -99,8 +101,10 @@ class GameOfLife:
 
         return game_of_life
 
-    def save(self, filename: Path) -> None:
-        with filename.open(mode='w') as file:
+    def save(self, path: Union[str, Path]) -> None:
+        path: Path = Path(path)
+
+        with path.open(mode='w') as file:
             for row in self.curr_generation:
                 data: str = ''.join(map(str, row)) + '\n'
                 file.write(data)
