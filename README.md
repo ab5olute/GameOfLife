@@ -40,7 +40,7 @@ A Python implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki
 ### Pygame Controle Settings
 
 * To pause the game: press SPACE key.
-* To draw or remove cell click: LEFT MOUSE button.
+* To draw or remove cell: click LEFT MOUSE button.
 
 ### Run tests
 
