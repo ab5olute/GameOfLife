@@ -11,7 +11,7 @@ A Python implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki
 ### Example of GameOfLife usage
 
 ```python
->>> life = GameOfLife.from_file(pathlib.Path('figures/glider.txt'))
+>>> life = GameOfLife.from_file('figures/glider.txt')
 ```
 ```python
 >>> life.curr_generation
@@ -34,7 +34,7 @@ A Python implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki
  [0, 0, 0, 0, 0]]
 ```
 ```python
->>> life.save(pathlib.Path('glider-4-steps.txt'))
+>>> life.save('glider-4-steps.txt')
 ```
 
 ### Pygame Controle Settings
